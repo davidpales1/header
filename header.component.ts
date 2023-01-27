@@ -48,7 +48,7 @@ export class HeaderComponent implements OnInit {
   userExist: boolean | undefined;
   ngOnInit() {
     if (localStorage.getItem("userToken")) {
-      this.messageBadge = this.unReedMessages['length']
+      //this.messageBadge = this.unReedMessages['length']
       return this.userExist = true;
     }
     else {
