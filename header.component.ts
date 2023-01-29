@@ -11,7 +11,10 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
+  menuShow = false;
+  toggleNavbar(){
+    this.menuShow = !this.menuShow;
+  }
   SERVER_URL = environment.SERVER_URL_WITH_OUT_SLASH
 
   userInfo = JSON.parse(localStorage.getItem('UserInfo')!);
@@ -41,7 +44,7 @@ export class HeaderComponent implements OnInit {
     //       //console.log("annat")
     //     }
     //     // push data to CurrentMessages if the type is chat
-    //     // push data to Currentnetification if the type is like or request
+    //     // push data to Current Notification if the type is like or request
     //   });
     // }
   }
