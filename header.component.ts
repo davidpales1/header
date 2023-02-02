@@ -1,3 +1,4 @@
+import { StyleModeService } from './style-mode.service';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Observable } from 'rxjs';
 
@@ -22,6 +23,7 @@ export class HeaderComponent implements OnInit {
   messageBadge = 0
   notifications = 15;
   constructor(
+    public styleModeService: StyleModeService
     //private chatService: ChatService
     ) {
     //connect to websocket

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { environment } from 'src/environments/environment';
+import { StyleModeService } from '../style-mode.service';
 
 @Component({
   selector: 'app-login-menu',
@@ -8,7 +9,7 @@ import { environment } from 'src/environments/environment';
 })
 export class LoginMenuComponent implements OnInit {
 
-  constructor() { }
+  constructor(public styleModeService: StyleModeService) { }
 
   ngOnInit(): void {
   }
