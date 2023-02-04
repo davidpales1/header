@@ -15,9 +15,9 @@
   <!-- Dropdown menu -->
 
   <mat-menu #menu="matMenu"
-    [ngClass]="styleModeService.mode === 'light' ?
-    'absolute right-0 z-20 mt-2 overflow-hidden bg-white rounded-md shadow-lg w-80' :
-    'absolute right-0 z-20 mt-2 overflow-hidden rounded-md shadow-lg w-80 bg-gray-800'">
+  [class]="styleModeService.mode === 'light' ?
+  'absolute right-0 z-20 mt-2 overflow-hidden bg-white rounded-md shadow-lg w-80' :
+  'absolute right-0 z-20 mt-2 overflow-hidden bg-gray-800 rounded-md shadow-lg w-80'">
     <a routerLink="#"
     [ngClass]="styleModeService.mode === 'light' ?
     'flex items-center px-4 py-3 -mx-2 transition-colors duration-200 transform border-b border-gray-100 hover:bg-gray-50' :
@@ -75,7 +75,7 @@
     </a>
     <a routerLink="#"
     [ngClass]="styleModeService.mode === 'light' ?
-      'block py-2 font-bold text-center text-white bg-gray-800 hover:underline' :
+      'block py-2 font-bold text-center text-black bg-gray-200 hover:underline' :
       'block py-2 font-bold text-center text-white bg-gray-700 hover:underline'"
 
     >See all

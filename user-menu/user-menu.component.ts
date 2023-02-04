@@ -1,5 +1,5 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, LOCALE_ID, Inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment';
 import { StyleModeService } from '../style-mode.service';
@@ -13,6 +13,7 @@ export class UserMenuComponent implements OnInit {
   userInfo = JSON.parse(localStorage.getItem('UserInfo')!);
   //authenticateHttpHeaders = new HttpHeaders({ 'Authorization': 'Token ' + localStorage.getItem('userToken') });
   darkMode:boolean = JSON.parse(localStorage.getItem('darkMode'));
+
 
   constructor(
     private http: HttpClient,

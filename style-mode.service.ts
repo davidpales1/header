@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { LOCALE_ID, Inject, Injectable } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
@@ -7,7 +7,7 @@ export class StyleModeService {
   darkMode = localStorage.getItem('darkMode');
   mode = localStorage.getItem('mode');
 
-  constructor(public styleModeService: StyleModeService) { }
+  constructor(@Inject(LOCALE_ID) public localeId: string, public styleModeService: StyleModeService) { }
   setDarkMode(mode){
     localStorage.setItem('darkMode', new Boolean(mode).toString());
     if (mode) {
