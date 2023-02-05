@@ -1,5 +1,5 @@
   <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:mt-0">
-      <li *ngFor="let url of menu" [ngClass]="{ 'selected': ('/'+url.routerLink) === currentRoute }">
+      <li *ngFor="let url of menu" [ngClass]="{ 'selected': url.routerLink === currentRoute }">
         <a [routerLink]="[url.routerLink]"
 
         [ngClass]="styleModeService.mode === 'light' ?

@@ -8,7 +8,7 @@
         <img src="../../assets/logo.png" class="mr-3 h-6 sm:h-9" alt="" />
         <span [ngClass]="styleModeService.mode === 'light' ?
                 'self-center text-xl font-semibold whitespace-nowrap' :
-                'self-center text-xl font-semibold whitespace-nowrap text-white'">The islamic nation</span>
+                'self-center text-xl font-semibold whitespace-nowrap text-white'">{{ configTranslations[currentLang]['title'] }}</span>
       </a>
 
       <div class="flex items-center lg:order-2">

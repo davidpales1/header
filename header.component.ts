@@ -1,6 +1,7 @@
 import { StyleModeService } from './style-mode.service';
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, LOCALE_ID, OnInit,Inject, ViewChild } from '@angular/core';
 import { Observable } from 'rxjs';
+import configTranslations from 'src/locale/config.json';
 
 import { environment } from 'src/environments/environment';
 //import { ChatService } from 'src/services/websocket/chat.service';
@@ -12,6 +13,9 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  configTranslations = configTranslations;
+
+  currentLang = this.localeId || 'en'; // or 'ar'
   menuShow = false;
   toggleNavbar(){
     this.menuShow = !this.menuShow;
@@ -23,6 +27,7 @@ export class HeaderComponent implements OnInit {
   messageBadge = 0
   notifications = 15;
   constructor(
+    @Inject(LOCALE_ID) public localeId: string,
     public styleModeService: StyleModeService
     //private chatService: ChatService
     ) {

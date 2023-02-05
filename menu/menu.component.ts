@@ -25,7 +25,8 @@ export class MenuComponent implements OnInit {
       ).subscribe(
           event =>
            {
-              this.currentRoute = event.url;
+            //this.router.url.split('/')[1]
+              this.currentRoute = event.url.split('/')[1];
               console.log(event);
            });
     }
