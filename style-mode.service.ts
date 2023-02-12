@@ -8,7 +8,7 @@ export class StyleModeService {
   mode = localStorage.getItem('mode');
 
   constructor(@Inject(LOCALE_ID) public localeId: string, public styleModeService: StyleModeService) { }
-  setDarkMode(mode){
+  setDarkMode(mode: boolean){
     localStorage.setItem('darkMode', new Boolean(mode).toString());
     if (mode) {
       localStorage.setItem('mode','dark');

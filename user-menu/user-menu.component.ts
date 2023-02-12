@@ -12,15 +12,28 @@ import { StyleModeService } from '../style-mode.service';
 export class UserMenuComponent implements OnInit {
   userInfo = JSON.parse(localStorage.getItem('UserInfo')!);
   //authenticateHttpHeaders = new HttpHeaders({ 'Authorization': 'Token ' + localStorage.getItem('userToken') });
-  darkMode:boolean = JSON.parse(localStorage.getItem('darkMode'));
 
-
+  darkMode: boolean = false;
   constructor(
     private http: HttpClient,
     public styleModeService: StyleModeService,
     ) { }
 
   ngOnInit(): void {
+    const valueFromLocalStorage = localStorage.getItem('darkMode');
+
+    if (valueFromLocalStorage === null) {
+      // handle the case where the value is not found in local storage
+    } else {
+      // pass the value to the function as a string
+      let darkModeValue = JSON.parse(valueFromLocalStorage);
+      if (darkModeValue === null) {
+        darkModeValue = false;
+      }
+
+      this.darkMode = darkModeValue;
+    }
+
 
   }
 

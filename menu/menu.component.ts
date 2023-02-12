@@ -16,7 +16,7 @@ import { filter } from 'rxjs/operators';
 export class MenuComponent implements OnInit {
   currentLang = this.localeId || 'en'; // or 'ar'
   menu = menu;
-  menuTranslations= menuTranslations;
+  menuTranslations:any= menuTranslations;
   currentRoute:any
 
   constructor(@Inject(LOCALE_ID) public localeId: string, public styleModeService: StyleModeService, private router: Router) {

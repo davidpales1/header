@@ -13,7 +13,7 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  configTranslations = configTranslations;
+  configTranslations:any = configTranslations;
 
   currentLang = this.localeId || 'en'; // or 'ar'
   menuShow = false;
