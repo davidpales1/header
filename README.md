@@ -35,3 +35,6 @@ SearchMenuComponent,
 
 
 ------------------------------------------------------------------------------------------
+
+## for dark mode
+npm install -D tailwindcss postcss autoprefixer
