@@ -24,3 +24,14 @@
 ## to configure the menu look at the menu folder readme.md file
 ------------------------------------------------------------------------------------------
 
+## add the component to the app.module.ts
+// header component
+HeaderComponent,
+LoginMenuComponent,
+UserMenuComponent,
+UserNotificationsMenuComponent,
+MenuComponent,
+SearchMenuComponent,
+
+
+------------------------------------------------------------------------------------------
