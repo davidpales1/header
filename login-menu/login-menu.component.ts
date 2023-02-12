@@ -14,9 +14,9 @@ export class LoginMenuComponent implements OnInit {
   ngOnInit(): void {
   }
   logIn() {
-    window.location.href = environment.LoginURL + 'ar/#/signIn' + "?" + "host=" + window.location.host + "&" + "language=" + window.navigator.language + "&" + "pathname=" + window.location.pathname;
+    window.location.href = environment.LoginURL + window.navigator.language.slice(0, 2)+'/#/signIn' + "?" + "host=" + window.location.host + "&" + "language=" + window.navigator.language.slice(0, 2) + "&" + "pathname=" + window.location.pathname;
   }
   SignUp() {
-    window.location.href = environment.LoginURL + 'ar/#/signUp' + "?" + "host=" + window.location.host + "&" + "language=" + window.navigator.language + "&" + "pathname=" + window.location.pathname;
+    window.location.href = environment.LoginURL + window.navigator.language.slice(0, 2)+'/#/signUp' + "?" + "host=" + window.location.host + "&" + "language=" + window.navigator.language.slice(0, 2) + "&" + "pathname=" + window.location.pathname;
   }
 }

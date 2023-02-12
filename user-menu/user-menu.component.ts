@@ -30,7 +30,7 @@ export class UserMenuComponent implements OnInit {
   Logout() {
     localStorage.removeItem('userToken');
     localStorage.removeItem('UserInfo');
-    window.location.href = environment.LoginURL + 'ar/#/signOut' + "?" + "host=" + window.location.host + "&" + "language=" + window.navigator.language + "&" + "pathname=" + window.location.pathname;
+    window.location.href = environment.LoginURL + 'ar/#/signOut' + "?" + "host=" + window.location.host + "&" + "language=" + window.navigator.language.slice(0, 2) + "&" + "pathname=" + window.location.pathname;
 
   }
   // Subscription() {
